@@ -24,4 +24,20 @@ $(document).ready(() => {
             $("#pagina").html(data)
         })
     })
+
+    $('#competencia').on('change', e => {
+        let competencia = $(e.target).val()
+
+        $.ajax({
+            type: 'GET',
+            url: 'app.php',
+            data: `competencia=${competencia}`,
+            dataType: 'json',
+            success: data => {
+            $('#numeroVendas').html(data.numeroVendas)
+            $('#totalVendas').html(data.totalVendas)
+            },
+            error: erro => {alert(erro)}
+        })
+    })
 })
