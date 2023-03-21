@@ -36,6 +36,12 @@ $(document).ready(() => {
             success: data => {
             $('#numeroVendas').html(data.numeroVendas)
             $('#totalVendas').html(data.totalVendas)
+            $('#clientesAtivos').html(data.clientesAtivos)
+            $('#clientesInativos').html(data.clientesInativos)
+            $('#totalReclamacoes').html(data.totalReclamacoes)
+            $('#totalElogios').html(data.totalElogios)
+            $('#totalSugestoes').html(data.totalSugestoes)
+            $('#totalDespesas').html(data.totalDespesas)
             },
             error: erro => {alert(erro)}
         })
